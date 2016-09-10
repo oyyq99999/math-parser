@@ -50,6 +50,10 @@ final class TokenType
     /** Token representing a closing parenthesis, i.e. ')' */
     const CloseParenthesis = 32;
 
+    /** Token representing a square root operator */
+    const SquareRootOperator = 97;
+    /** Token representing a factorial operator */
+    const FactorialOperator = 98;
     /** Token representing a unary minus. Not used. This is the responsibility of the Parser */
     const UnaryMinus = 99;
     /** Token representing '+' */

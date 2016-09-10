@@ -85,12 +85,12 @@ class LaTeXPrinter implements Visitor
 
         $right = $node->getRight();
 
-        if ($operator == '*') {
-            $operator = '';
-            if ($left instanceof FunctionNode || $right instanceof NumberNode || $right instanceof IntegerNode || $right instanceof RationalNode || ($right instanceof ExpressionNode && $right->getLeft() instanceof NumberNode)) {
-                $operator = '\cdot ';
-            }
-        }
+        // if ($operator == '*') {
+        //     $operator = '';
+        //     if ($left instanceof FunctionNode || $right instanceof NumberNode || $right instanceof IntegerNode || $right instanceof RationalNode || ($right instanceof ExpressionNode && $right->getLeft() instanceof NumberNode)) {
+        //         $operator = '\cdot ';
+        //     }
+        // }
 
         if ($right) {
             $rightValue = $this->parenthesize($right, $node);

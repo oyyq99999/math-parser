@@ -94,7 +94,7 @@ abstract class Node implements Visitable
             case TokenType::PosInt:
             case TokenType::Integer:
                 $x = intval($token->getValue());
-                return new NumberNode($x);
+                return new IntegerNode($x);
             case TokenType::RealNumber:
                 $x = floatval($token->getValue());
                 return new NumberNode($x);

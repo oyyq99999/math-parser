@@ -106,6 +106,12 @@ class LaTeXPrinter implements Visitor
             }
 
         }
+        if ($operator == '√') {
+            return '\sqrt{'.$left->accept($this).'}';
+        }
+        if ($operator == '!') {
+            return "$leftValue$operator";
+        }
 
         return "$operator$leftValue";
 

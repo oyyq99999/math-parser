@@ -278,14 +278,15 @@ class Parser
     */
     protected function naiveHandleExpression($node)
     {
-        if ($node->getOperator() == '~') {
+        $operator = $node->getOperator();
+        if (in_array($operator, ['!', '~', '√'])) {
 
             $left = $this->operandStack->pop();
             if ($left === null) {
                 throw new SyntaxErrorException();
             }
 
-            $node->setOperator('-');
+            $node->setOperator($operator == '~' ? '-' : $operator);
             $node->setLeft($left);
 
             return $node;

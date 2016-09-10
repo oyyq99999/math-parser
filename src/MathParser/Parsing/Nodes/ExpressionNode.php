@@ -80,12 +80,22 @@ class ExpressionNode extends Node
 
             case '~':
                 $this->precedence = 25;
-                $this->associativity = self::LEFT_ASSOC;
+                $this->associativity = self::RIGHT_ASSOC;
                 break;
 
             case '^':
                 $this->precedence = 30;
                 $this->associativity = self::RIGHT_ASSOC;
+                break;
+
+            case '√':
+                $this->precedence = 35;
+                $this->associativity = self::RIGHT_ASSOC;
+                break;
+
+            case '!':
+                $this->precedence = 40;
+                $this->associativity = self::LEFT_ASSOC;
                 break;
 
             default:
@@ -179,7 +189,7 @@ class ExpressionNode extends Node
      */
     public function canBeUnary()
     {
-        return $this->operator == '+' || $this->operator == '-' || $this->operator == '~';
+        return in_array($this->operator, ['+', '-', '~', '!', '√']);
     }
 
     /**

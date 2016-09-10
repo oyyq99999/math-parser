@@ -1,14 +1,17 @@
 {
-    "name": "mossadal/math-parser",
-    "description": "PHP parser for mathematical expressions, including elementary functions, variables and implicit multiplication. Also supports symbolic differentiation.",
+    "name": "oyyq99999/simple-math-parser",
+    "description": "PHP parser for mathematical expressions, suited for the game Tchisla",
     "keywords": ["parser", "mathematics" ],
-    "homepage": "https://github.com/mossadal/math-parser",
     "license": "LGPL-3.0",
     "authors": [
         {
             "name": "Frank Wikström",
             "email": "frank@mossadal.se",
             "role": "Developer"
+        },
+        {
+            "name": "Yunqi Ouyang",
+            "email": "ouyang@yunqi.li"
         }
     ],
     "require": {
